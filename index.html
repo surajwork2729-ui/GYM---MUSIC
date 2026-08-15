@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GYM MUSIC</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(180deg, #071b3d, #102e63, #190d12);
+}
+
+.container {
+  min-height: 100vh;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.online {
+  font-size: 16px;
+  margin-bottom: 80px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: #19ff70;
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 15px #19ff70;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0 0 15px;
+  text-align: center;
+  font-weight: 900;
+}
+
+.subtitle {
+  font-size: 19px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.player {
+  width: 100%;
+  max-width: 420px;
+  padding: 22px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #ff3b18, #c91c05);
+  box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cover {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #222;
+  border: 3px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.song h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.song p {
+  margin: 6px 0 0;
+  opacity: .85;
+}
+
+audio {
+  width: 100%;
+  margin-top: 22px;
+}
+
+.gym {
+  margin-top: 25px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="online">
+    <span class="dot"></span>
+    <span id="people">536</span> लोग अभी सुन रहे हैं
+  </div>
+
+  <h1>GYM WALA 💪</h1>
+
+  <div class="subtitle">
+    मेहनत का नाम जिम 🔥
+  </div>
+
+  <div class="player">
+
+    <div class="song">
+
+      <div class="cover">
+        🎧
+      </div>
+
+      <div>
+        <h2>BEAST MODE 🔥</h2>
+        <p>Gym Motivation Music</p>
+      </div>
+
+    </div>
+
+    <audio controls>
+      <source src="gym.mp3" type="audio/mpeg">
+      आपका browser audio support नहीं करता।
+    </audio>
+
+  </div>
+
+  <div class="gym">
+    NO PAIN • NO GAIN
+  </div>
+
+</div>
+
+<script>
+let people = Math.floor(Math.random() * 100) + 500;
+document.getElementById("people").innerText = people;
+</script>
+
+</body>
+</html>
